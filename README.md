@@ -40,7 +40,10 @@ npx prettier --write .
 
 For a seamless development experience, we recommend using VSCode with specific settings. The .vscode/settings.json file provides editor preferences such as code formatting on save and ESLint integration.
 
-You can include this configuration to ensure everyone is using the same settings: 1. Open VSCode 2. Install ESLint and Prettier extensions for VSCode. 3. Add the .vscode/settings.json file to your project to enforce these settings.
+You can include this configuration to ensure everyone is using the same settings: 
+1. Open VSCode 
+2. Install ESLint and Prettier extensions for VSCode. 
+3. Add the .vscode/settings.json file to your project to enforce these settings.
 
 ```bash
 {
