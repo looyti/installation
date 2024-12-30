@@ -1,0 +1,24 @@
+name: Use Central Ruleset
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  apply-ruleset:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Central Repository
+        uses: actions/checkout@v3
+        with:
+          repository: org-name/ruleset-automation
+          ref: main
+      - name: Apply Ruleset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -X POST -H "Authorization: Bearer $GITHUB_TOKEN" \
+          -H "Accept: application/vnd.github+json" \
+          -d @general-rules.json \
+          https://api.github.com/repos/<looyti>/<installation>/rulesets
