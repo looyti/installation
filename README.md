@@ -20,7 +20,6 @@ npm init -y
 
 ```bash
 # Install ESLint and Prettier
-
 npm install eslint prettier --save-dev
 ```
 
