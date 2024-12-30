@@ -2,7 +2,7 @@
 
 Please follow the [Commit Guidelines](./commit-guidelines.md) when making changes.
 
-For detailed instructions on importing the general ruleset, refer to the [Ruleset Import Guide](./path-to-your-ruleset-import-guide.md).
+For detailed instructions on importing the general ruleset, refer to the [Ruleset Import Guide](./ruleset-import-guide.md).
 
 ---
 
