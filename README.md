@@ -1,64 +1,88 @@
-## Installation
+## Project Setup
 
-This repository aims to maintain consistent coding standards across all contributors. To ensure uniformity, we use a set of common configuration files for code linting, formatting, and editor settings.
+This repository maintains common configuration files to ensure consistent coding standards across all contributors. These configurations cover code linting, formatting, and editor settings. They serve as the rules and configurations to be followed when starting a new project. It is important to refer to the most up-to-date rules and configurations stored in this repository.
 
-Follow the steps below to set up your development environment and ensure that you're following the same standards as the rest of the team.
 
-### 1. Clone the Repository
+### 1. Start a New Project
 
-Start by cloning the repository to your local machine:
+When starting a new project, you need to apply the common configurations from this repository. Follow these steps to set up your project:
 
 ```bash
-git clone <repository-url>
+# Create a new project directory
+mkdir my-new-project
+cd my-new-project
+
+# Initialize the project (you can use npm or yarn)
+npm init -y
 ```
 
 ### 2. Install Dependencies
 
 ```bash
-npm install
+# Install ESLint and Prettier
+
+npm install eslint prettier --save-dev
 ```
 
-### 3. Setup ESLint
+### 3. Add ESLint and Prettier Configurations
+
+To integrate ESLint and Prettier into your project, follow these steps:
+
+a. Add ESLint Configuration
+
+You can access the .eslintrc.js file from the repository. Simply copy it from the repository and place it in your project root directory:
 
 ```bash
-npm install eslint --save-dev
+# Copy the .eslintrc.js file from the repository to your project
+curl -o .eslintrc.js https://github.com/looyti/installation/.eslintrc.js
 ```
 
-### 4. Setup Prettier
+Alternatively, you can manually copy the content of the .eslintrc.js file from the repository into your project.
+
+b. Add Prettier Configuration
+
+You can access the .prettierrc file from the repository as well. To include it in your project, run:
 
 ```bash
-npm install prettier --save-dev
+# Copy the .prettierrc file from the repository to your project
+curl -o .prettierrc https://github.com/looyti/installation/.prettierrc
 ```
 
-Make sure to run Prettier to format the code automatically:
+Alternatively, you can manually copy the content of the .prettierrc file from the repository into your project.
+
+
+### 4. Configure VSCode Settings
+
+For an optimal development environment, configure VSCode to automatically format and lint your code. You can access the .vscode/settings.json file from the repository:
 
 ```bash
+# Copy the .vscode/settings.json file from the repository to your project
+curl -o .vscode/settings.json https://github.com/looyti/installation/.vscode/settings.json
+```
+
+Alternatively, you can manually copy the content of the .vscode/settings.json file from the repository into your project.
+
+This file ensures that the appropriate formatting and linting settings are applied within VSCode.
+
+
+
+## Run Prettier and ESLint
+
+```bash
+# Format the code using Prettier
 npx prettier --write .
+
+# Run ESLint to check the code and fix issues
+npx eslint . --fix
 ```
 
-### 5. VSCode Settings
+## Check for Latest Rules in This Repository
 
-For a seamless development experience, we recommend using VSCode with specific settings. The .vscode/settings.json file provides editor preferences such as code formatting on save and ESLint integration.
-
-You can include this configuration to ensure everyone is using the same settings: 
-1. Open VSCode 
-2. Install ESLint and Prettier extensions for VSCode. 
-3. Add the .vscode/settings.json file to your project to enforce these settings.
-
-```bash
-{
-    "editor.formatOnSave": true,
-    "eslint.autoFixOnSave": true,
-    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-    "prettier.requireConfig": true
-}
-```
-
-This ensures that code is formatted and linted automatically when saving files in VSCode.
+This repository contains the most up-to-date ESLint, Prettier, and VSCode configurations used in the project. When starting a new project or contributing to an existing one, always refer to the configurations here to ensure the code follows the same standards. This will help maintain a consistent codebase throughout the project.
 
 ## Project Structure
 
-The project is structured as follows:
+When starting a new project, the structure should look like this:
 
 ```bash
 /root
@@ -71,8 +95,8 @@ The project is structured as follows:
     package.json
 ```
 
-By following these steps and using these configurations, everyone working on this project will maintain the same coding style and standards.
-
 ## Conclusion
 
-Using ESLint, Prettier, and VSCode settings ensures that all code is written consistently, making collaboration easier and avoiding formatting issues. Make sure you follow the guidelines and run the necessary tools to keep the project clean and maintainable.
+Using ESLint, Prettier, and VSCode settings ensures that all code is consistently written, making collaboration easier and preventing formatting issues. Always check the latest rules and configurations from this repository before starting or contributing to the project, as it helps maintain a clean and sustainable codebase.
+
+This version refers to accessing the .eslintrc.js, .prettierrc, and .vscode/settings.json files directly from the repository, ensuring contributors follow the most up-to-date configurations.

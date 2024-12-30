@@ -1,0 +1,45 @@
+{
+    // Editor Behaviors
+    "editor.formatOnSave": true, // Automatically formats when saving.
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit", // Applies ESLint fixes.
+      "source.organizeImports": "explicit" // Organizes import statements.
+    },
+    
+    // Language-Specific Settings
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode" // Prettier formatter for JavaScript.
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode" // Prettier formatter for JavaScript React.
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode" // Prettier formatter for TypeScript.
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode" // Prettier formatter for TypeScript React.
+    },
+    "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode" // Prettier formatter for SCSS.
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode" // Prettier formatter for JSON.
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode" // Prettier formatter for JSON with Comments.
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode" // Prettier formatter for HTML.
+    },
+    
+    // File Type Associations
+    "files.associations": {
+      "*.scss": "tailwindcss", // Treats SCSS files as TailwindCSS.
+      "*.css": "tailwindcss", // Treats CSS files as TailwindCSS.
+      "*.ts": "typescript" // Treats TS files as TypeScript.
+    },
+    
+    // JavaScript and TypeScript Features
+    "javascript.updateImportsOnFileMove.enabled": "always", // Updates import paths when files are moved.
+    "eslint.codeActionsOnSave.rules": null // Fixes ESLint rules on save.
+  }

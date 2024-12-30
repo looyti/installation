@@ -1,92 +1,92 @@
 {
-  // Temel kuralların ve genişletmelerin tanımlandığı yer
-  "extends": [
-    "eslint:recommended", // ESLint'in temel önerilen kuralları
-    "plugin:react/recommended", // React projeleri için önerilen kurallar
-    "plugin:@typescript-eslint/recommended", // TypeScript için önerilen kurallar
-    "plugin:tailwindcss/recommended", // Tailwind CSS ile ilgili önerilen kurallar
-    "plugin:jsx-a11y/recommended", // Erişilebilirlik (a11y) için önerilen kurallar
-    "plugin:react-hooks/recommended" // React Hooks kullanımına yönelik kurallar
-  ],
-  "root": true, // Bu yapılandırmayı geçersiz kılacak üst bir yapılandırma olmadığını belirtir
-  "parserOptions": {
-    "ecmaVersion": "latest", // Modern ECMAScript özelliklerini destekler
-    "sourceType": "module", // ES6 modüllerini desteklemek için
-    "ecmaFeatures": {
-      "jsx": true // JSX sözdizimini destekler
-    }
-  },
-  "env": {
-    "browser": true, // Tarayıcı ortamı
-    "commonjs": true, // CommonJS modüllerini desteklemek için
-    "es6": true, // ECMAScript 6 özelliklerini destekler
-    "jest": true // Jest test çerçevesine uygun ortam
-  },
-  "plugins": [
-    "react", // React'e özgü ESLint kuralları
-    "jsx-a11y", // Erişilebilirlik için kurallar
-    "tailwindcss", // Tailwind CSS kullanımı için kurallar
-    "@typescript-eslint", // TypeScript ile ilgili kurallar
-    "import" // İthalat düzenleme ve sıralama kuralları
-  ],
-  "settings": {
-    "react": {
-      "version": "detect" // React sürümünü otomatik algılar
-    },
-    "import/resolver": {
-      "typescript": {
-        "project": "./tsconfig.json" // TypeScript yapılandırma dosyasını kullanır
-      },
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"] // Desteklenen dosya uzantıları
+    // Place where basic rules and extensions are defined
+    "extends": [
+      "eslint:recommended", // ESLint's recommended base rules
+      "plugin:react/recommended", // Recommended rules for React projects
+      "plugin:@typescript-eslint/recommended", // Recommended rules for TypeScript
+      "plugin:tailwindcss/recommended", // Recommended rules for Tailwind CSS
+      "plugin:jsx-a11y/recommended", // Recommended rules for accessibility (a11y)
+      "plugin:react-hooks/recommended" // Rules for using React Hooks
+    ],
+    "root": true, // Indicates that there is no upper-level configuration that will override this
+    "parserOptions": {
+      "ecmaVersion": "latest", // Supports modern ECMAScript features
+      "sourceType": "module", // Supports ES6 modules
+      "ecmaFeatures": {
+        "jsx": true // Supports JSX syntax
       }
-    }
-  },
-  "overrides": [
-    {
-      "files": ["**/*.{js,jsx,ts,tsx}"],
-      "extends": [
-        "plugin:react/recommended",
-        "plugin:jsx-a11y/recommended",
-        "plugin:react-hooks/recommended"
-      ],
-      "settings": {
-        "react": { "version": "detect" },
-        "import/resolver": {
-          "typescript": {}, // TypeScript dosyalarını çözümlemek için
-          "node": { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    },
+    "env": {
+      "browser": true, // Supports the browser environment
+      "commonjs": true, // Supports CommonJS modules
+      "es6": true, // Supports ECMAScript 6 features
+      "jest": true // Environment suitable for Jest testing framework
+    },
+    "plugins": [
+      "react", // ESLint rules specific to React
+      "jsx-a11y", // Rules for accessibility
+      "tailwindcss", // Rules for using Tailwind CSS
+      "@typescript-eslint", // Rules for TypeScript
+      "import" // Rules for managing and sorting imports
+    ],
+    "settings": {
+      "react": {
+        "version": "detect" // Automatically detects the React version
+      },
+      "import/resolver": {
+        "typescript": {
+          "project": "./tsconfig.json" // Uses the TypeScript configuration file
+        },
+        "node": {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"] // Supported file extensions
         }
       }
     },
-    {
-      "files": ["**/*.{ts,tsx}"],
-      "parser": "@typescript-eslint/parser", // TypeScript için özel parser
-      "extends": [
-        "plugin:@typescript-eslint/recommended", // TypeScript için önerilen kurallar
-        "plugin:import/recommended", // İthalat düzenlemeleri için kurallar
-        "plugin:import/typescript" // TypeScript import kuralları
-      ],
-      "rules": {
-        "import/order": [
-          "error",
-          {
-            // İthalat sıralama kuralı
-            "alphabetize": { "order": "asc" } // Alfabetik sıralama
+    "overrides": [
+      {
+        "files": ["**/*.{js,jsx,ts,tsx}"],
+        "extends": [
+          "plugin:react/recommended",
+          "plugin:jsx-a11y/recommended",
+          "plugin:react-hooks/recommended"
+        ],
+        "settings": {
+          "react": { "version": "detect" },
+          "import/resolver": {
+            "typescript": {}, // Resolves TypeScript files
+            "node": { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
           }
-        ]
+        }
+      },
+      {
+        "files": ["**/*.{ts,tsx}"],
+        "parser": "@typescript-eslint/parser", // Special parser for TypeScript
+        "extends": [
+          "plugin:@typescript-eslint/recommended", // Recommended rules for TypeScript
+          "plugin:import/recommended", // Rules for import management
+          "plugin:import/typescript" // TypeScript import rules
+        ],
+        "rules": {
+          "import/order": [
+            "error",
+            {
+              // Import sorting rule
+              "alphabetize": { "order": "asc" } // Alphabetical sorting
+            }
+          ]
+        }
+      },
+      {
+        "files": ["*.test.{js,ts,jsx,tsx}"],
+        "env": { "jest": true }, // Jest testing environment
+        "plugins": ["jest"], // Jest rules
+        "extends": ["plugin:jest/recommended"] // Recommended rules for Jest
+      },
+      {
+        "files": [".eslintrc.cjs"],
+        "env": {
+          "node": true // Node.js environment
+        }
       }
-    },
-    {
-      "files": ["*.test.{js,ts,jsx,tsx}"],
-      "env": { "jest": true }, // Jest test ortamı
-      "plugins": ["jest"], // Jest kuralları
-      "extends": ["plugin:jest/recommended"] // Jest için önerilen kurallar
-    },
-    {
-      "files": [".eslintrc.cjs"],
-      "env": {
-        "node": true // Node.js ortamı
-      }
-    }
-  ]
-}
+    ]
+  }
