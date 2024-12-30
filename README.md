@@ -1,3 +1,9 @@
+## Contribution Guidelines
+
+Please follow the [Commit Guidelines](./commit-guidelines.md) when making changes.
+
+---
+
 ## Project Setup
 
 This repository maintains common configuration files to ensure consistent coding standards across all contributors. These configurations cover code linting, formatting, and editor settings. They serve as the rules and configurations to be followed when starting a new project. It is important to refer to the most up-to-date rules and configurations stored in this repository.
