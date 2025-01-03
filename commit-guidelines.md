@@ -7,7 +7,7 @@ This document describes the types of commits and provides examples for writing c
 ## General Format
 
 ```
-<type>/<ISSUE-NO> description
+<type>/<ISSUE-NO> title
 ```
 
 - **`type`**: The purpose of the commit (e.g., `feat`, `fix`).
