@@ -41,7 +41,7 @@ You can access the .eslintrc.js file from the repository. Simply copy it from th
 
 ```bash
 # Copy the .eslintrc.js file from the repository to your project
-curl -o .eslintrc.js https://github.com/looyti/installation/.eslintrc.js
+curl -o .eslintrc.js https://raw.githubusercontent.com/looyti/installation/refs/heads/main/.eslintrc
 ```
 
 Alternatively, you can manually copy the content of the .eslintrc.js file from the repository into your project.
@@ -52,7 +52,7 @@ You can access the .prettierrc file from the repository as well. To include it i
 
 ```bash
 # Copy the .prettierrc file from the repository to your project
-curl -o .prettierrc https://github.com/looyti/installation/.prettierrc
+curl -o .prettierrc https://raw.githubusercontent.com/looyti/installation/refs/heads/main/.prettierrc
 ```
 
 Alternatively, you can manually copy the content of the .prettierrc file from the repository into your project.
@@ -64,7 +64,7 @@ For an optimal development environment, configure VSCode to automatically format
 
 ```bash
 # Copy the .vscode/settings.json file from the repository to your project
-curl -o .vscode/settings.json https://github.com/looyti/installation/.vscode/settings.json
+curl -o .vscode/settings.json https://raw.githubusercontent.com/looyti/installation/refs/heads/main/.vscode/settings.json
 ```
 
 Alternatively, you can manually copy the content of the .vscode/settings.json file from the repository into your project.
