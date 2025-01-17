@@ -12,7 +12,6 @@
   "proseWrap": "preserve",
   "arrowParens": "avoid",
   "endOfLine": "lf",
-
   "overrides": [
     {
       "files": "*.scss",
@@ -33,9 +32,5 @@
         "trailingComma": "none"
       }
     }
-  ],
-
-  "plugins": [
-    "prettier-plugin-tailwindcss"
   ]
 }
